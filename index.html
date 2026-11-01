@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وب‌سایت من</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <!-- هدر سایت -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="لوگو" class="logo-img">
+                <span class="logo-text">نام سایت</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#services">خدمات</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="منو">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- تصویر هدر بزرگ -->
+    <section class="hero" id="home">
+        <img src="header.png" alt="هدر سایت" class="hero-img">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>به وب‌سایت ما خوش آمدید</h1>
+                <p>توضیح کوتاه درباره سایت یا کسب‌وکار شما</p>
+                <a href="#services" class="btn">بیشتر بدانید</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش درباره ما -->
+    <section class="about container" id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>درباره ما</h2>
+                <p>
+                    این یک متن نمونه درباره شرکت یا وب‌سایت شما است. می‌توانید این متن را
+                    با محتوای واقعی جایگزین کنید. ما در تلاشیم بهترین خدمات را ارائه دهیم.
+                </p>
+                <p>
+                    اینجا هم می‌توانید یک پاراگراف دیگر اضافه کنید تا صفحه کامل‌تر شود.
+                </p>
+                <a href="#contact" class="btn btn-outline">ارتباط با ما</a>
+            </div>
+            <div class="about-image">
+                <img src="image.png" alt="تصویر درباره ما">
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش خدمات -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدمات ما</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="image.png" alt="خدمت ۱">
+                    <h3>خدمت اول</h3>
+                    <p>توضیح کوتاه درباره این خدمت.</p>
+                </div>
+                <div class="service-card">
+                    <img src="image.png" alt="خدمت ۲">
+                    <h3>خدمت دوم</h3>
+                    <p>توضیح کوتاه درباره این خدمت.</p>
+                </div>
+                <div class="service-card">
+                    <img src="image.png" alt="خدمت ۳">
+                    <h3>خدمت سوم</h3>
+                    <p>توضیح کوتاه درباره این خدمت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش تماس -->
+    <section class="contact container" id="contact">
+        <h2 class="section-title">تماس با ما</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('پیام شما ارسال شد (نمونه)');">
+            <input type="text" placeholder="نام شما" required>
+            <input type="email" placeholder="ایمیل شما" required>
+            <textarea placeholder="پیام شما" rows="5" required></textarea>
+            <button type="submit" class="btn">ارسال پیام</button>
+        </form>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <img src="logo.png" alt="لوگو" class="footer-logo">
+                <p>توضیح کوتاه درباره سایت در فوتر.</p>
+            </div>
+            <div class="footer-links">
+                <h4>لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#services">خدمات</a></li>
+                    <li><a href="#contact">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script>
+        // منوی موبایل
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    </script>
+</body>
+</html>
